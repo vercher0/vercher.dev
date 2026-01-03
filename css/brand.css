@@ -4,43 +4,59 @@
    Purpose: Mechanical enforcement of brand usage
    ========================================================= */
 
+/* NOTE:
+   All brand modes follow the same structural token schema.
+   Visual differences are intentional, not structural.
+*/
+
 /* ---------- Base Neutrals (Shared) ---------- */
 :root {
-  --white: #ffffff;
-  --off-white: #f7f7f5;
-  --light-gray: #ececec;
+  --white: #ffffff; /* pure white */
+  --off-white: #f7f7f5; /* very light gray */
+  --light-gray: #e9ebf2; /* very light gray-blue */
 
-  --soft-black: #121212;
-  --charcoal: #1e1e1e;
+  --soft-black: #121212; /* very dark gray */
+  --charcoal: #1e1e1e; /* dark gray */
 }
 
-/* ---------- Civic / Political Mode ---------- */
+/* ---------- Civic Mode ---------- */
 :root {
-  --civic-primary: #9e1b32;    /* Crimson */
-  --civic-accent: #003153;   /* Prussian Blue */
+  --civic-primary: #2222b2; /* Royal Blue */
+  --civic-accent: #b22222;  /* Firebrick Red */
 
-  --civic-bg: var(--white);
-  --civic-text: #003153;   /* Prussian Blue */
+  /* Civic surfaces */
+  --civic-bg-light: var(--light-gray);
+  --civic-bg-dark: var(--charcoal);
+
+  /* Civic text */
+  --civic-text-dark: var(--soft-black);
+  --civic-text-light: var(--light-gray);
 }
 
 /* ---------- Consulting Mode ---------- */
 :root {
-  --consulting-accent: #ffd100; /* Cadmium Yellow */
+  --consulting-primary: #fff600; /* Cadmium Yellow */
+  --consulting-accent: #0009ff;  /* Ultramarine Blue */
 
-  /* Ergonomic neutral chosen to reduce eye strain with cadmium yellow */
-  --consulting-bg-light: #b4b4b4;   /* light charcoal / cool gray */
-  --consulting-bg-dark: #222222;    /* charcoal */
+  /* Consulting surfaces */
+  --consulting-bg-light: var(--light-gray);
+  --consulting-bg-dark: var(--charcoal);
 
-  --consulting-text-dark: #1e1e1e;  /* charcoal */
-  --consulting-text-light: #e6e6e6; /* light gray for dark mode readability */
+  /* Consulting text */
+  --consulting-text-dark: var(--soft-black);
+  --consulting-text-light: var(--light-gray);
 }
 
 /* ---------- Personal Mode ---------- */
 :root {
   --personal-primary: #6a0dad; /* Violet */
+  --personal-accent: #0019a8;  /* Cobalt Blue */
 
-  --personal-bg-dark: var(--soft-black);
+  /* Personal surfaces */
   --personal-bg-light: var(--light-gray);
+  --personal-bg-dark: var(--charcoal);
+
+  /* Personal text */
   --personal-text-dark: var(--soft-black);
   --personal-text-light: var(--light-gray);
 }
@@ -53,13 +69,14 @@
 body[data-brand-mode="civic"] {
   --brand-primary: var(--civic-primary);
   --brand-accent: var(--civic-accent);
-  --brand-bg: var(--civic-bg);
-  --brand-text: var(--civic-text);
+  --brand-bg: var(--civic-bg-light);
+  --brand-text: var(--civic-text-dark);
 }
 
 /* Consulting */
 body[data-brand-mode="consulting"] {
-  --brand-primary: var(--consulting-accent);
+  --brand-primary: var(--consulting-primary);
+  --brand-accent: var(--consulting-accent);
   --brand-bg: var(--consulting-bg-light);
   --brand-text: var(--consulting-text-dark);
 }
@@ -67,8 +84,93 @@ body[data-brand-mode="consulting"] {
 /* Personal */
 body[data-brand-mode="personal"] {
   --brand-primary: var(--personal-primary);
+  --brand-accent: var(--personal-accent);
   --brand-bg: var(--personal-bg-light);
   --brand-text: var(--personal-text-dark);
+}
+
+/* ---------------------------------------------------------
+   Civic Enhancements
+   --------------------------------------------------------- */
+
+/* Civic lockup readability enhancements */
+body[data-brand-mode="civic"] .vercher-lockup .lockup-wordmark-outline {
+  stroke: var(--civic-accent);
+  stroke-width: 2;
+}
+
+body[data-brand-mode="civic"] .vercher-lockup .lockup-mark {
+  stroke: var(--civic-accent);
+  stroke-width: 1;
+}
+
+/* Civic Links (Institutional Accent) */
+body[data-brand-mode="civic"] a {
+  color: var(--civic-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  font-weight: 500;
+}
+
+body[data-brand-mode="civic"] a:hover,
+body[data-brand-mode="civic"] a:focus {
+  text-decoration-thickness: 2px;
+}
+
+/* ---------------------------------------------------------
+   Consulting Enhancements
+   --------------------------------------------------------- */
+
+/* Consulting lockup readability enhancements */
+body[data-brand-mode="consulting"] .vercher-lockup .lockup-wordmark-outline {
+  stroke: var(--brand-text);
+  stroke-width: 2;
+}
+
+body[data-brand-mode="consulting"] .vercher-lockup .lockup-mark {
+  stroke: var(--brand-text);
+  stroke-width: 1;
+}
+
+/* Consulting Links (Interaction Accent) */
+body[data-brand-mode="consulting"] a {
+  color: var(--consulting-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  font-weight: 500;
+}
+
+body[data-brand-mode="consulting"] a:hover,
+body[data-brand-mode="consulting"] a:focus {
+  text-decoration-thickness: 2px;
+}
+
+/* ---------------------------------------------------------
+   Personal Enhancements
+   --------------------------------------------------------- */
+
+/* Personal lockup readability enhancements */
+body[data-brand-mode="personal"] .vercher-lockup .lockup-wordmark-outline {
+  stroke: var(--personal-accent);
+  stroke-width: 2;
+}
+
+body[data-brand-mode="personal"] .vercher-lockup .lockup-mark {
+  stroke: var(--personal-accent);
+  stroke-width: 1;
+}
+
+/* Personal Links (Reflective Accent) */
+body[data-brand-mode="personal"] a {
+  color: var(--brand-primary);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  font-weight: 500;
+}
+
+body[data-brand-mode="personal"] a:hover,
+body[data-brand-mode="personal"] a:focus {
+  text-decoration-thickness: 2px;
 }
 
 /* ---------- Generic Brand Hooks ---------- */
@@ -86,6 +188,16 @@ body[data-brand-mode="personal"] {
 
 .brand-icon {
   fill: var(--brand-primary);
+}
+
+/* ---------- Lockup SVG Hooks ---------- */
+.vercher-lockup .lockup-wordmark-outline {
+  fill: none;
+  stroke-linejoin: round;
+}
+
+.vercher-lockup .lockup-wordmark-fill {
+  fill: currentColor;
 }
 
 /* ---------- Brand Lockup (Primary Color Only) ---------- */

@@ -88,3 +88,26 @@ ol {
 .hidden {
   display: none;
 }
+
+/* ---------- Footer ---------- */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 2rem 1rem;
+  font-size: 0.875rem;
+}
+
+footer .footer-icon {
+  width: 60px;
+  height: auto;
+  display: block;
+  flex-shrink: 0;
+}
+
+footer .footer-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

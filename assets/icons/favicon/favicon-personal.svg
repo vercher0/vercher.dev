@@ -1,8 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 118 94"
+     viewBox="-2 -2 122 98"
      role="img"
-     aria-label="vercher.dev personal favicon">
-  <g fill="#6A0DAD">
+     aria-label="vercher.dev favicon">
+  <g fill="#6a0dad"
+     stroke="#0019a8"
+     stroke-width="0.75"
+     stroke-linejoin="round">
     <!-- Row 0 -->
     <rect x="0"   y="0"  width="10" height="10"/>
     <rect x="12"  y="0"  width="10" height="10"/>

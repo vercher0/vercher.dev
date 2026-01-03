@@ -1,4 +1,4 @@
-# vercher.dev — Brand Usage Guide (v1.1)
+# vercher.dev — Brand Usage Guide (v1.3)
 
 ## 1. Core Principle (Non-Negotiable)
 
@@ -10,14 +10,21 @@
 
 If the symbol changes shape, the system is broken.
 
+All pages must support both light and dark mode.  
+Brand modes define color relationships, not fixed themes.  
+Light and dark mode switch background and text surfaces only — never brand colors.
+
 ---
 
 ## 2. Brand Modes & When to Use Them
 
+Each brand mode defines exactly one primary color and one accent color.  
+Accents support hierarchy and interaction but must never compete with the primary.
+
 ### A. Civic / Political Mode
 
-**Primary Color:** Prussian Blue  
-**Supporting Colors:** White, limited Crimson (accent only)  
+**Primary Color:** Royal Blue  
+**Supporting Colors:** Firebrick Red (accent)  
 **Purpose:** Trust, legitimacy, civic clarity
 
 **Use this mode when:**
@@ -27,14 +34,16 @@ If the symbol changes shape, the system is broken.
 - Pages intended for broad, non-technical audiences
 
 **Rules**
-- Default background: white
-- Icon color: Prussian Blue
-- Red is allowed only as a small accent (never dominant)
-- Your **name must be more visually prominent than the icon**
+- Royal Blue is an **accent**, not a full background
+- Primary backgrounds: charcoal (dark mode), light gray (light mode)
+- Icon color: Royal Blue
+- Red is allowed only as an accent (never dominant)
+- SVGs must be **CSS-controlled** (no baked-in color)
+- Vercher **name must be more visually prominent than the icon**
+- The header lockup uses a subtle outline for readability on light backgrounds
 - The icon functions as a *seal*, not the headline
 
 **Avoid**
-- Dark or black backgrounds
 - Experimental layouts
 - Technical jargon near the mark
 - Over-stylization
@@ -56,9 +65,11 @@ If the symbol changes shape, the system is broken.
 
 **Rules**
 - Yellow is an **accent**, not a full background
-- Primary backgrounds: charcoal, slate, or off-white
+- Primary backgrounds: charcoal (dark mode), light gray (light mode)
+- Icon color: Cadmium Yellow 
 - Icon may stand alone without your name in digital contexts
 - SVGs must be **CSS-controlled** (no baked-in color)
+- The header lockup uses a subtle outline for readability on light backgrounds
 
 **Avoid**
 - Red or blue tones (political bleed)
@@ -72,6 +83,7 @@ If the symbol changes shape, the system is broken.
 ### C. Personal Mode
 
 **Primary Color:** Violet  
+**Accent Color:** Cobalt Blue
 **Purpose:** Curiosity, reflection, individuality
 
 **Use this mode when:**
@@ -81,9 +93,11 @@ If the symbol changes shape, the system is broken.
 
 **Rules**
 - Violet may be primary or accent
+- Cobalt Blue is an **accent**, not a full background
 - Layouts may be more expressive
 - Icon may be paired with lighter or more human typography
 - Minor asymmetry is acceptable
+- The header lockup follows the same CSS-driven structure as other modes
 
 **Avoid**
 - Corporate polish
@@ -94,34 +108,43 @@ If the symbol changes shape, the system is broken.
 
 ---
 
-## 2.5 Brand Color Tokens
+## 3. Brand Color Tokens
 
 ### Civic / Political Mode
-- Prussian Blue: `#003153`
-- Crimson (accent only): `#9E1B32`
-- White: `#FFFFFF`
+- Royal Blue: `#2222B2`
+- Firebrick Red (accent): `#B22222`
+- Light Gray (light background): `#e9ebf2`
+- Light Gray (light text): `#e9ebf2`
+- Charcoal (dark background): `#1e1e1e`
+- Soft Black (dark text): `#121212`
 
 ### Consulting Mode
-- Cadmium Yellow: `#FFD100`
-- Charcoal: `#1E1E1E`
-- Off-White: `#F7F7F5`
+- Cadmium Yellow: `#FFF600`
+- Ultramarine Blue (accent): `#0009FF`
+- Light Gray (light background): `#e9ebf2`
+- Light Gray (light text): `#e9ebf2`
+- Charcoal (dark background): `#1e1e1e`
+- Soft Black (dark text): `#121212`
 
 ### Personal Mode
 - Violet: `#6A0DAD`
-- Soft Black: `#121212`
-- Light Gray: `#ECECEC`
+- Cobalt Blue (accent): `#0019a8`
+- Light Gray (light background): `#e9ebf2`
+- Light Gray (light text): `#e9ebf2`
+- Charcoal (dark background): `#1e1e1e`
+- Soft Black (dark text): `#121212`
 
 ---
 
-## 2.6 Favicon Usage (Per-Mode Locking)
+## 4. Favicon Usage (Per-Mode Locking)
 
-Favicons are page-level metadata and are not styled by CSS variables.
+Favicons are page-level metadata and are not styled by CSS variables.  
 Each page MUST explicitly select the favicon that matches its brand mode.
 
 ### Required Favicons
-- Civic / Political: `favicon-civic.ico` (Prussian Blue)
-- Consulting: `favicon-consulting.ico` (Cadmium Yellow)
-- Personal: `favicon-personal.ico` (Violet)
+- Civic / Political: `favicon-civic.svg` (Royal Blue)
+- Consulting: `favicon-consulting.svg` (Cadmium Yellow)
+- Personal: `favicon-personal.svg` (Violet)
 
 ### Rules
 - Geometry must be identical across all favicons
@@ -133,19 +156,19 @@ Each page MUST explicitly select the favicon that matches its brand mode.
 
 Civic / Political page:
 ```html
-<link rel="icon" href="/favicon-civic.ico">
+<link rel="icon" href="/favicon-civic.svg">
 <body data-brand-mode="civic">
 ```
 
 Consulting page:
 ```html
-<link rel="icon" href="/favicon-consulting.ico">
+<link rel="icon" href="/favicon-consulting.svg">
 <body data-brand-mode="consulting">
 ```
 
 Personal page:
 ```html
-<link rel="icon" href="/favicon-personal.ico">
+<link rel="icon" href="/favicon-personal.svg">
 <body data-brand-mode="personal">
 ```
 
@@ -154,7 +177,7 @@ If a page’s favicon and brand mode do not match, the page is considered invali
 ---
 
 
-## 2.7 Implementation Checklist
+## 5. Implementation Checklist
 
 Every new page added to vercher.dev MUST satisfy the following checklist before it is considered complete.
 
@@ -181,9 +204,9 @@ Every new page added to vercher.dev MUST satisfy the following checklist before 
 
 If any checklist item fails, the page is not ready to publish.
 
-## 2.8 Comment Block Template
+## 6. Comment Block Template
 
-Every new HTML page SHOULD begin with a standardized comment block.
+Every new HTML page SHOULD begin with a standardized comment block.  
 This block documents intent, enforces discipline, and reduces future drift.
 
 ### Standard Template
@@ -217,7 +240,7 @@ Last Reviewed: YYYY-MM-DD
 - It should be completed before the page is considered publishable
 - Updating the `Last Reviewed` date is encouraged when changes are made
 
-## 3. Icon Usage Rules (Hard Constraints)
+## 7. Icon Usage Rules (Hard Constraints)
 
 ### Approved Variants
 - Icon-only
@@ -236,7 +259,7 @@ Last Reviewed: YYYY-MM-DD
 
 ---
 
-## 4. Color Rules (No Exceptions)
+## 8. Color Rules (No Exceptions)
 
 - One primary brand color per page
 - Neutral colors are always permitted
@@ -249,7 +272,7 @@ If a page feels like it belongs to two modes, the wrong mode was chosen.
 
 ---
 
-## 5. Typography Relationship
+## 9. Typography Relationship
 
 - Icon: geometric, rigid, modular
 - Type: readable, human, restrained
@@ -259,7 +282,7 @@ If a page feels like it belongs to two modes, the wrong mode was chosen.
 
 ---
 
-## 6. Governance Rule (This Prevents Drift)
+## 10. Governance Rule (This Prevents Drift)
 
 When uncertain:
 1. Who is this for?
@@ -273,7 +296,7 @@ When uncertain:
 
 ---
 
-## 7. Versioning
+## 11. Versioning
 
 This document is versioned intentionally.
 

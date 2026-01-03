@@ -1,29 +1,29 @@
 <!--
 ============================================================
-Page: Consulting — Overview
+Page: Consulting — Systems & Advisory
 URL: /consulting/
 
-/* ---------- Brand Lockup (Primary Color Only) ---------- */
-.site-branding {
-  color: var(--brand-primary);
-}
-
 Brand Mode: consulting
-Favicon: favicon-consulting.svg
+Primary Accent: Cadmium Yellow
+Secondary Neutrals: Charcoal / Ergonomic Gray
 
 Intent:
-- Describe consulting focus and scope
-- Establish credibility without pitching
-- Route to deeper consulting content later
+- Describe consulting focus and approach
+- Communicate systems-oriented, analytical work
+- Emphasize clarity, ergonomics, and credibility over marketing
 
 Checklist:
-- [ ] data-brand-mode matches brand mode
-- [ ] Correct favicon set in <head>
-- [ ] Uses brand.css tokens only
-- [ ] Icons use CSS-controlled fill
-- [ ] Page reads as a single mode
+- [x] data-brand-mode matches brand mode
+- [x] Inline SVG lockup uses currentColor
+- [x] Brand colors driven by brand.css tokens
+- [x] Consulting-specific ergonomics applied
+- [x] Header structure matches site pattern
 
-Last Reviewed: 2026-01-02
+Notes:
+- Wordmark uses stroke + fill for readability on light surfaces
+- Pixel mark outline is experimental and may be removed
+
+Last Reviewed: 2026-01-03
 ============================================================
 -->
 <!DOCTYPE html>
@@ -51,12 +51,12 @@ Last Reviewed: 2026-01-02
       <header>
         <div class="site-branding">
           <svg xmlns="http://www.w3.org/2000/svg"
-               viewBox="0 0 600 120"
+               viewBox="-10 -10 620 140"
                role="img"
                aria-label="vercher.dev logo"
                class="vercher-lockup">
             <!-- Pixel V Icon -->
-            <g fill="currentColor">
+            <g class="lockup-mark" fill="currentColor">
               <rect x="0"   y="0"  width="10" height="10"/>
               <rect x="12"  y="0"  width="10" height="10"/>
               <rect x="24"  y="0"  width="10" height="10"/>
@@ -96,11 +96,23 @@ Last Reviewed: 2026-01-02
               <rect x="48"  y="84" width="10" height="10"/>
             </g>
 
-            <text x="160"
-                  y="78"
-                  font-family="Aptos Mono, IBM Plex Mono, JetBrains Mono, Courier New, monospace"
-                  font-size="56"
-                  fill="currentColor">
+            <!-- Wordmark outline -->
+            <text class="lockup-wordmark-outline"
+              x="160"
+              y="78"
+              font-family="Aptos Mono, IBM Plex Mono, JetBrains Mono, Courier New, monospace"
+              font-size="56"
+              fill="none">
+              vercher.dev
+            </text>
+
+            <!-- Wordmark fill -->
+            <text class="lockup-wordmark-fill"
+              x="160"
+              y="78"
+              font-family="Aptos Mono, IBM Plex Mono, JetBrains Mono, Courier New, monospace"
+              font-size="56"
+              fill="currentColor">
               vercher.dev
             </text>
           </svg>
@@ -154,10 +166,60 @@ Last Reviewed: 2026-01-02
       </section>
     </main>
     <footer>
-      <p>© 2026 John Vercher</p>
-      <p>
-        <a href="/">Home</a>
-      </p>
+      <div class="footer-brand">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="-10 -10 140 120"
+             role="img"
+             aria-label="Vercher V icon"
+             class="footer-icon vercher-icon">
+          <g class="vercher-icon-mark" fill="currentColor">
+            <rect x="0"   y="0"  width="10" height="10"/>
+            <rect x="12"  y="0"  width="10" height="10"/>
+            <rect x="24"  y="0"  width="10" height="10"/>
+            <rect x="84"  y="0"  width="10" height="10"/>
+            <rect x="96"  y="0"  width="10" height="10"/>
+            <rect x="108" y="0"  width="10" height="10"/>
+
+            <rect x="12"  y="12" width="10" height="10"/>
+            <rect x="24"  y="12" width="10" height="10"/>
+            <rect x="84"  y="12" width="10" height="10"/>
+            <rect x="96"  y="12" width="10" height="10"/>
+
+            <rect x="12"  y="24" width="10" height="10"/>
+            <rect x="24"  y="24" width="10" height="10"/>
+            <rect x="36"  y="24" width="10" height="10"/>
+            <rect x="72"  y="24" width="10" height="10"/>
+            <rect x="84"  y="24" width="10" height="10"/>
+
+            <rect x="24"  y="36" width="10" height="10"/>
+            <rect x="36"  y="36" width="10" height="10"/>
+            <rect x="72"  y="36" width="10" height="10"/>
+            <rect x="84"  y="36" width="10" height="10"/>
+
+            <rect x="24"  y="48" width="10" height="10"/>
+            <rect x="36"  y="48" width="10" height="10"/>
+            <rect x="48"  y="48" width="10" height="10"/>
+            <rect x="72"  y="48" width="10" height="10"/>
+
+            <rect x="36"  y="60" width="10" height="10"/>
+            <rect x="48"  y="60" width="10" height="10"/>
+            <rect x="60"  y="60" width="10" height="10"/>
+            <rect x="72"  y="60" width="10" height="10"/>
+
+            <rect x="48"  y="72" width="10" height="10"/>
+            <rect x="60"  y="72" width="10" height="10"/>
+
+            <rect x="48"  y="84" width="10" height="10"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="footer-meta">
+        <p>© 2026 John Vercher</p>
+        <p>
+          <a href="/">Home</a>
+        </p>
+      </div>
     </footer>
   </body>
 </html>
