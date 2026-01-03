@@ -1,3 +1,14 @@
+# Repository Visibility
+
+This repository is intentionally **public**.
+
+It contains the public source for vercher.dev and is designed to be openly viewable.
+The structure, documentation, and code reflect how the site is built and how decisions
+are made, and are not intended to contain secrets, credentials, or private data.
+
+If sensitive material is ever introduced in the future, it should live in a separate,
+private repository.
+
 vercher.dev/
 ├── index.html                # (later) root landing / redirect
 │
