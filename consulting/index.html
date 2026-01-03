@@ -3,8 +3,13 @@
 Page: Consulting — Overview
 URL: /consulting/
 
+/* ---------- Brand Lockup (Primary Color Only) ---------- */
+.site-branding {
+  color: var(--brand-primary);
+}
+
 Brand Mode: consulting
-Favicon: favicon-consulting.ico
+Favicon: favicon-consulting.svg
 
 Intent:
 - Describe consulting focus and scope
@@ -32,7 +37,8 @@ Last Reviewed: 2026-01-02
     <!-- Favicon -->
     <link
       rel="icon"
-      href="/assets/icons/favicon/favicon-consulting.ico"
+      type="image/svg+xml"
+      href="/assets/icons/favicon/favicon-consulting.svg"
     />
 
     <!-- Styles -->
@@ -43,18 +49,77 @@ Last Reviewed: 2026-01-02
   <body data-brand-mode="consulting">
     <main>
       <header>
-        <h1>Consulting & Systems Work</h1>
-        <p>
-          I help organizations understand, design, and improve complex systems —
-          particularly in healthcare, data, and operations.
-        </p>
+        <div class="site-branding">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 600 120"
+               role="img"
+               aria-label="vercher.dev logo"
+               class="vercher-lockup">
+            <!-- Pixel V Icon -->
+            <g fill="currentColor">
+              <rect x="0"   y="0"  width="10" height="10"/>
+              <rect x="12"  y="0"  width="10" height="10"/>
+              <rect x="24"  y="0"  width="10" height="10"/>
+              <rect x="84"  y="0"  width="10" height="10"/>
+              <rect x="96"  y="0"  width="10" height="10"/>
+              <rect x="108" y="0"  width="10" height="10"/>
+
+              <rect x="12"  y="12" width="10" height="10"/>
+              <rect x="24"  y="12" width="10" height="10"/>
+              <rect x="84"  y="12" width="10" height="10"/>
+              <rect x="96"  y="12" width="10" height="10"/>
+
+              <rect x="12"  y="24" width="10" height="10"/>
+              <rect x="24"  y="24" width="10" height="10"/>
+              <rect x="36"  y="24" width="10" height="10"/>
+              <rect x="72"  y="24" width="10" height="10"/>
+              <rect x="84"  y="24" width="10" height="10"/>
+
+              <rect x="24"  y="36" width="10" height="10"/>
+              <rect x="36"  y="36" width="10" height="10"/>
+              <rect x="72"  y="36" width="10" height="10"/>
+              <rect x="84"  y="36" width="10" height="10"/>
+
+              <rect x="24"  y="48" width="10" height="10"/>
+              <rect x="36"  y="48" width="10" height="10"/>
+              <rect x="48"  y="48" width="10" height="10"/>
+              <rect x="72"  y="48" width="10" height="10"/>
+
+              <rect x="36"  y="60" width="10" height="10"/>
+              <rect x="48"  y="60" width="10" height="10"/>
+              <rect x="60"  y="60" width="10" height="10"/>
+              <rect x="72"  y="60" width="10" height="10"/>
+
+              <rect x="48"  y="72" width="10" height="10"/>
+              <rect x="60"  y="72" width="10" height="10"/>
+
+              <rect x="48"  y="84" width="10" height="10"/>
+            </g>
+
+            <text x="160"
+                  y="78"
+                  font-family="Aptos Mono, IBM Plex Mono, JetBrains Mono, Courier New, monospace"
+                  font-size="56"
+                  fill="currentColor">
+              vercher.dev
+            </text>
+          </svg>
+        </div>
+
+        <div class="site-intro">
+          <h1>Consulting & Systems Work</h1>
+          <p>
+            I help organizations understand, design, and improve complex systems —
+            particularly in healthcare, data, and operations.
+          </p>
+        </div>
       </header>
 
       <section>
         <h2>Focus Areas</h2>
         <ul>
           <li>Healthcare operations and quality improvement</li>
-          <li>Data analytics, reporting, and decision support</li>
+          <li>Data analytics, reporting, and decision support for clinical and operational leaders</li>
           <li>Systems design and process improvement</li>
           <li>Technology adoption and integration</li>
         </ul>

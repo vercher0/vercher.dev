@@ -16,21 +16,23 @@
 
 /* ---------- Civic / Political Mode ---------- */
 :root {
-  --civic-primary: #003153;   /* Prussian Blue */
-  --civic-accent: #9e1b32;    /* Crimson (accent only) */
+  --civic-primary: #9e1b32;    /* Crimson */
+  --civic-accent: #003153;   /* Prussian Blue */
 
   --civic-bg: var(--white);
-  --civic-text: var(--civic-primary);
+  --civic-text: #003153;   /* Prussian Blue */
 }
 
 /* ---------- Consulting Mode ---------- */
 :root {
   --consulting-accent: #ffd100; /* Cadmium Yellow */
 
-  --consulting-bg-dark: var(--charcoal);
-  --consulting-bg-light: var(--off-white);
-  --consulting-text-dark: var(--charcoal);
-  --consulting-text-light: var(--off-white);
+  /* Ergonomic neutral chosen to reduce eye strain with cadmium yellow */
+  --consulting-bg-light: #b4b4b4;   /* light charcoal / cool gray */
+  --consulting-bg-dark: #222222;    /* charcoal */
+
+  --consulting-text-dark: #1e1e1e;  /* charcoal */
+  --consulting-text-light: #e6e6e6; /* light gray for dark mode readability */
 }
 
 /* ---------- Personal Mode ---------- */
@@ -44,11 +46,11 @@
 }
 
 /* =========================================================
-   Mode Enforcement Helpers (Optional but Recommended)
+   Mode Enforcement (data-brand-mode)
    ========================================================= */
 
 /* Civic */
-.brand-civic {
+body[data-brand-mode="civic"] {
   --brand-primary: var(--civic-primary);
   --brand-accent: var(--civic-accent);
   --brand-bg: var(--civic-bg);
@@ -56,14 +58,14 @@
 }
 
 /* Consulting */
-.brand-consulting {
+body[data-brand-mode="consulting"] {
   --brand-primary: var(--consulting-accent);
   --brand-bg: var(--consulting-bg-light);
   --brand-text: var(--consulting-text-dark);
 }
 
 /* Personal */
-.brand-personal {
+body[data-brand-mode="personal"] {
   --brand-primary: var(--personal-primary);
   --brand-bg: var(--personal-bg-light);
   --brand-text: var(--personal-text-dark);
@@ -85,3 +87,26 @@
 .brand-icon {
   fill: var(--brand-primary);
 }
+
+/* ---------- Brand Lockup (Primary Color Only) ---------- */
+.site-branding {
+  color: var(--brand-primary);
+}
+/* =========================================================
+   Design System Notes (Locked Decisions)
+   ---------------------------------------------------------
+   • Brand modes are enforced exclusively via `data-brand-mode`
+     on <body>. Class-based brand selectors are intentionally
+     not used.
+
+   • The Vercher lockup is treated as a brand component.
+     It is rendered as inline SVG wherever brand-aware
+     color is required.
+
+   • `--brand-primary` is the only color permitted to drive
+     logo, icon, and accent coloration.
+
+   • Consulting mode prioritizes visual ergonomics over
+     brightness; neutral backgrounds may be darker than
+     traditional “light mode” surfaces by design.
+   ========================================================= */

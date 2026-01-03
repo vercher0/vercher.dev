@@ -4,7 +4,7 @@ Page: Personal Gateway
 URL: /
 
 Brand Mode: personal
-Favicon: favicon-personal.ico
+Favicon: favicon-personal.svg
 
 Intent:
 - Establish identity and orientation
@@ -30,7 +30,11 @@ Last Reviewed: 2026-01-02
     <title>John Vercher</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="/assets/icons/favicon/favicon-personal.ico" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/assets/icons/favicon/favicon-personal.svg"
+    />
 
     <!-- Styles -->
     <link rel="stylesheet" href="/css/brand.css" />
@@ -40,10 +44,69 @@ Last Reviewed: 2026-01-02
   <body data-brand-mode="personal">
     <main>
       <header>
-        <h1>John Vercher</h1>
-        <p>
-          I work at the intersection of systems, service, and responsibility.
-        </p>
+        <div class="site-branding">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 600 120"
+               role="img"
+               aria-label="vercher.dev logo"
+               class="vercher-lockup">
+            <!-- Pixel V Icon -->
+            <g fill="currentColor">
+              <rect x="0"   y="0"  width="10" height="10"/>
+              <rect x="12"  y="0"  width="10" height="10"/>
+              <rect x="24"  y="0"  width="10" height="10"/>
+              <rect x="84"  y="0"  width="10" height="10"/>
+              <rect x="96"  y="0"  width="10" height="10"/>
+              <rect x="108" y="0"  width="10" height="10"/>
+
+              <rect x="12"  y="12" width="10" height="10"/>
+              <rect x="24"  y="12" width="10" height="10"/>
+              <rect x="84"  y="12" width="10" height="10"/>
+              <rect x="96"  y="12" width="10" height="10"/>
+
+              <rect x="12"  y="24" width="10" height="10"/>
+              <rect x="24"  y="24" width="10" height="10"/>
+              <rect x="36"  y="24" width="10" height="10"/>
+              <rect x="72"  y="24" width="10" height="10"/>
+              <rect x="84"  y="24" width="10" height="10"/>
+
+              <rect x="24"  y="36" width="10" height="10"/>
+              <rect x="36"  y="36" width="10" height="10"/>
+              <rect x="72"  y="36" width="10" height="10"/>
+              <rect x="84"  y="36" width="10" height="10"/>
+
+              <rect x="24"  y="48" width="10" height="10"/>
+              <rect x="36"  y="48" width="10" height="10"/>
+              <rect x="48"  y="48" width="10" height="10"/>
+              <rect x="72"  y="48" width="10" height="10"/>
+
+              <rect x="36"  y="60" width="10" height="10"/>
+              <rect x="48"  y="60" width="10" height="10"/>
+              <rect x="60"  y="60" width="10" height="10"/>
+              <rect x="72"  y="60" width="10" height="10"/>
+
+              <rect x="48"  y="72" width="10" height="10"/>
+              <rect x="60"  y="72" width="10" height="10"/>
+
+              <rect x="48"  y="84" width="10" height="10"/>
+            </g>
+
+            <!-- Wordmark -->
+            <text x="160"
+                  y="78"
+                  font-family="Aptos Mono, IBM Plex Mono, JetBrains Mono, Courier New, monospace"
+                  font-size="56"
+                  fill="currentColor">
+              vercher.dev
+            </text>
+          </svg>
+        </div>
+        <div class="site-intro">
+          <h1>John Vercher</h1>
+          <p>
+            I work at the intersection of systems, service, and responsibility.
+          </p>
+        </div>
       </header>
 
       <section>
