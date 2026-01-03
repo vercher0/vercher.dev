@@ -30,9 +30,9 @@ vercher.dev/
 │   │   ├── vercher-v.svg
 │   │   ├── vercher-lockup.svg
 │   │   └── favicon/
-│   │       ├── favicon-civic.ico
-│   │       ├── favicon-consulting.ico
-│   │       └── favicon-personal.ico
+│   │       ├── favicon-civic.svg
+│   │       ├── favicon-consulting.svg
+│   │       └── favicon-personal.svg
 │   │
 │   └── images/               # future photos, diagrams, etc.
 │
