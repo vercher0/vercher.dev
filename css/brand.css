@@ -1,0 +1,87 @@
+/* =========================================================
+   vercher.dev — Brand Tokens
+   Version: 1.0
+   Purpose: Mechanical enforcement of brand usage
+   ========================================================= */
+
+/* ---------- Base Neutrals (Shared) ---------- */
+:root {
+  --white: #ffffff;
+  --off-white: #f7f7f5;
+  --light-gray: #ececec;
+
+  --soft-black: #121212;
+  --charcoal: #1e1e1e;
+}
+
+/* ---------- Civic / Political Mode ---------- */
+:root {
+  --civic-primary: #003153;   /* Prussian Blue */
+  --civic-accent: #9e1b32;    /* Crimson (accent only) */
+
+  --civic-bg: var(--white);
+  --civic-text: var(--civic-primary);
+}
+
+/* ---------- Consulting Mode ---------- */
+:root {
+  --consulting-accent: #ffd100; /* Cadmium Yellow */
+
+  --consulting-bg-dark: var(--charcoal);
+  --consulting-bg-light: var(--off-white);
+  --consulting-text-dark: var(--charcoal);
+  --consulting-text-light: var(--off-white);
+}
+
+/* ---------- Personal Mode ---------- */
+:root {
+  --personal-primary: #6a0dad; /* Violet */
+
+  --personal-bg-dark: var(--soft-black);
+  --personal-bg-light: var(--light-gray);
+  --personal-text-dark: var(--soft-black);
+  --personal-text-light: var(--light-gray);
+}
+
+/* =========================================================
+   Mode Enforcement Helpers (Optional but Recommended)
+   ========================================================= */
+
+/* Civic */
+.brand-civic {
+  --brand-primary: var(--civic-primary);
+  --brand-accent: var(--civic-accent);
+  --brand-bg: var(--civic-bg);
+  --brand-text: var(--civic-text);
+}
+
+/* Consulting */
+.brand-consulting {
+  --brand-primary: var(--consulting-accent);
+  --brand-bg: var(--consulting-bg-light);
+  --brand-text: var(--consulting-text-dark);
+}
+
+/* Personal */
+.brand-personal {
+  --brand-primary: var(--personal-primary);
+  --brand-bg: var(--personal-bg-light);
+  --brand-text: var(--personal-text-dark);
+}
+
+/* ---------- Generic Brand Hooks ---------- */
+.brand-bg {
+  background-color: var(--brand-bg);
+}
+
+.brand-text {
+  color: var(--brand-text);
+}
+
+.brand-accent {
+  color: var(--brand-primary);
+}
+
+.brand-icon {
+  fill: var(--brand-primary);
+}

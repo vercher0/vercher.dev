@@ -1,0 +1,11 @@
+# OS junk
+.DS_Store
+
+# Editor settings
+.vscode/
+
+# Node / tooling (future-proofing)
+node_modules/
+
+# Logs
+*.log
