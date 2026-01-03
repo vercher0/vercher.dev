@@ -10,20 +10,20 @@ If sensitive material is ever introduced in the future, it should live in a sepa
 private repository.
 
 vercher.dev/
-├── index.html                # (later) root landing / redirect
+├── index.html                # root landing / redirect
 │
 ├── civic/
-│   └── index.html            # (later) civic landing
+│   └── index.html            # civic landing
 │
 ├── consulting/
-│   └── index.html            # (later) consulting landing
+│   └── index.html            # consulting landing
 │
 ├── personal/
-│   └── index.html            # (later) personal landing
+│   └── index.html            # personal landing
 │
 ├── css/
 │   ├── brand.css             # brand tokens & mode locking
-│   └── base.css              # structural defaults (already created)
+│   └── base.css              # structural defaults
 │
 ├── assets/
 │   ├── icons/
@@ -42,4 +42,4 @@ vercher.dev/
 ├── brand/
 │   └── BRAND.md              # brand usage guide
 │
-└── README.md                 # repo-level notes (optional)
+└── README.md                 # repo-level notes

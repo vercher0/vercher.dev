@@ -100,3 +100,7 @@ The current focus is on:
 - Clarity of intent
 
 Visual polish and deeper content will be added incrementally.
+
+## NOTES
+
+System stable as of 2026-01-02. Changes beyond this point should be intentional.
