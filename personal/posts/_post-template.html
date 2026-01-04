@@ -72,6 +72,9 @@ Last Reviewed: YYYY-MM-DD
 
   <body data-brand-mode="personal">
     <main>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a> / <a href="/personal/">Personal</a> / <span aria-current="page">{Post Title}</span>
+      </nav>
       <header>
         <div class="site-branding">
           <a href="/" aria-label="Go to homepage">
@@ -133,13 +136,15 @@ Last Reviewed: YYYY-MM-DD
 
     <footer class="site-footer">
       <div class="footer-branding">
-        <img
-          src="/assets/icons/v.svg"
-          alt="Vercher V icon"
-          width="28"
-          height="28"
-          aria-hidden="true"
-        />
+        <a href="/" aria-label="Go to homepage">
+          <img
+            src="/assets/icons/v.svg"
+            alt="Vercher V icon"
+            width="28"
+            height="28"
+            aria-hidden="true"
+          />
+        </a>
       </div>
 
       <div class="footer-meta">
