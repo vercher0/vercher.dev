@@ -67,6 +67,11 @@ p {
   margin: 1rem 0;
 }
 
+/* ---------- Post Metadata ---------- */
+.post-meta {
+  text-align: right;
+}
+
 /* ---------- Links ---------- */
 a {
   color: var(--brand-primary);
