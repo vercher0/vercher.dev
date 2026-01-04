@@ -114,7 +114,7 @@ body[data-brand-mode="civic"] a {
 
 body[data-brand-mode="civic"] a:hover,
 body[data-brand-mode="civic"] a:focus {
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 1px;
 }
 
 /* ---------------------------------------------------------
@@ -142,7 +142,7 @@ body[data-brand-mode="consulting"] a {
 
 body[data-brand-mode="consulting"] a:hover,
 body[data-brand-mode="consulting"] a:focus {
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 1px;
 }
 
 /* ---------------------------------------------------------
