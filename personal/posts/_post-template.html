@@ -1,0 +1,133 @@
+<!--
+============================================================
+Page: Personal Post Template
+URL: /personal/posts/{slug}/
+
+Brand Mode: personal
+Intent:
+- Long-form personal writing
+- Exploration of ideas, systems, and experience
+- Not promotional, not civic messaging
+
+Checklist:
+- [ ] data-brand-mode="personal"
+- [ ] Uses brand.css tokens only
+- [ ] Headings follow h1 → h2 → h3 order
+- [ ] Meta description reflects post content
+- [ ] No em or en dashes in copy
+
+Last Reviewed: YYYY-MM-DD
+============================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{Post Title} | John Vercher</title>
+
+    <meta
+      name="description"
+      content="{One to two sentence summary of the post for SEO and previews.}"
+    />
+    <meta name="author" content="John Vercher" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{Post Title}" />
+    <meta
+      property="og:description"
+      content="{Same short summary used above.}"
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://vercher.dev/personal/posts/{slug}/"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{Post Title}" />
+    <meta
+      name="twitter:description"
+      content="{Same short summary used above.}"
+    />
+
+    <link
+      rel="canonical"
+      href="https://vercher.dev/personal/posts/{slug}/"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="/assets/icons/favicon/favicon-personal.svg"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/brand.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+  </head>
+
+  <body data-brand-mode="personal">
+    <main>
+      <header>
+        <div class="site-branding">
+          <img
+            src="/assets/icons/vercher-lockup.svg"
+            alt="Vercher.dev"
+            width="240"
+            height="auto"
+          />
+        </div>
+
+        <div class="site-intro">
+          <h1>{Post Title}</h1>
+          <p class="post-meta">
+            {Month Day, Year}
+          </p>
+        </div>
+      </header>
+
+      <article class="post-content">
+        <p>
+          Opening paragraph. Set the tone. Explain why this exists.
+        </p>
+
+        <h2>Section Heading</h2>
+        <p>
+          Write clearly. Short paragraphs. No rush.
+        </p>
+
+        <h2>Another Section</h2>
+        <p>
+          This is where ideas unfold. You are allowed to think slowly.
+        </p>
+
+        <h3>Optional Subsection</h3>
+        <p>
+          Use sparingly. Only when it helps structure.
+        </p>
+
+        <h2>Closing Thoughts</h2>
+        <p>
+          End with clarity, not certainty.
+        </p>
+      </article>
+
+      <nav class="post-nav">
+        <p>
+          <a href="/personal/">← Back to Personal Writing</a>
+        </p>
+      </nav>
+    </main>
+
+    <footer>
+      <p>© 2026 John Vercher</p>
+      <p>
+        <a href="/">Home</a>
+      </p>
+    </footer>
+  </body>
+</html>
