@@ -170,7 +170,7 @@ body[data-brand-mode="personal"] a {
 
 body[data-brand-mode="personal"] a:hover,
 body[data-brand-mode="personal"] a:focus {
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 1px;
 }
 
 /* ---------- Generic Brand Hooks ---------- */
