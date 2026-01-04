@@ -74,12 +74,14 @@ Last Reviewed: YYYY-MM-DD
     <main>
       <header>
         <div class="site-branding">
-          <img
-            src="/assets/icons/vercher-lockup.svg"
-            alt="Vercher.dev"
-            width="240"
-            height="auto"
-          />
+          <a href="/" aria-label="Go to homepage">
+            <img
+              src="/assets/icons/lockup-personal.svg"
+              alt="Vercher.dev"
+              width="240"
+              height="auto"
+            />
+          </a>
         </div>
 
         <div class="site-intro">
@@ -123,11 +125,23 @@ Last Reviewed: YYYY-MM-DD
       </nav>
     </main>
 
-    <footer>
-      <p>© 2026 John Vercher</p>
-      <p>
-        <a href="/">Home</a>
-      </p>
+    <footer class="site-footer">
+      <div class="footer-branding">
+        <img
+          src="/assets/icons/v.svg"
+          alt="Vercher V icon"
+          width="28"
+          height="28"
+          aria-hidden="true"
+        />
+      </div>
+
+      <div class="footer-meta">
+        <p>© 2026 John Vercher</p>
+        <p>
+          <a href="/">Home</a>
+        </p>
+      </div>
     </footer>
   </body>
 </html>
