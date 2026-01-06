@@ -1,5 +1,3 @@
-
-
 # vercher.dev
 
 This repository contains the public source for **vercher.dev**, my personal website.
@@ -7,7 +5,7 @@ This repository contains the public source for **vercher.dev**, my personal webs
 The site serves as a single, coherent presence for:
 - Civic and public service work
 - Consulting and systems-focused professional work
-- Personal writing and projects
+- Writing, essays, and reflective projects
 
 It is intentionally simple, static, and system-oriented.
 
@@ -33,16 +31,27 @@ The site is organized by context:
   Personal-first gateway that introduces who I am and routes visitors to
   the appropriate section.
 
+- `/about/`  
+  Orientation and background, explaining how my work across healthcare,
+  data, and public service fits together.
+
 - `/civic/`  
   Civic and public service work, written with an emphasis on trust,
   transparency, and accountability.
 
 - `/consulting/`  
   Professional consulting and systems work, focused on healthcare, data,
-  and operations.
+  analytics, and operations.
 
-- `/personal/`  
-  Personal writing, experiments, and projects.
+- `/writing/`  
+  Writing, essays, and longer-form reflections that do not fit neatly into
+  consulting or civic categories.
+
+- `/cv/`  
+  A concise, professional curriculum vitae.
+
+- `/contact/`  
+  Professional contact information and engagement pathways.
 
 Shared assets, styles, and documentation live outside these sections to
 enforce consistency and reduce drift.
@@ -103,4 +112,5 @@ Visual polish and deeper content will be added incrementally.
 
 ## NOTES
 
-System stable as of 2026-01-02. Changes beyond this point should be intentional.
+System stable as of 2026-01-06. Changes beyond this point should be intentional
+and documented.

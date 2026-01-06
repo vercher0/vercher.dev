@@ -10,7 +10,10 @@ If sensitive material is ever introduced in the future, it should live in a sepa
 private repository.
 
 vercher.dev/
-├── index.html                # root landing / redirect
+├── index.html                # root landing / routing hub
+│
+├── about/
+│   └── index.html            # about / orientation
 │
 ├── civic/
 │   └── index.html            # civic landing
@@ -18,8 +21,18 @@ vercher.dev/
 ├── consulting/
 │   └── index.html            # consulting landing
 │
-├── personal/
-│   └── index.html            # personal landing
+├── writing/
+│   ├── index.html            # writing landing
+│   ├── _post-template.html   # writing post template
+│   └── posts/
+│       ├── machine-ethics-2011.html
+│       └── why-i-care-about-systems-and-responsibility.html
+│
+├── cv/
+│   └── index.html            # curriculum vitae
+│
+├── contact/
+│   └── index.html            # contact page
 │
 ├── css/
 │   ├── brand.css             # brand tokens & mode locking
@@ -41,5 +54,7 @@ vercher.dev/
 │
 ├── brand/
 │   └── BRAND.md              # brand usage guide
+│
+├── sitemap.xml               # search engine sitemap
 │
 └── README.md                 # repo-level notes

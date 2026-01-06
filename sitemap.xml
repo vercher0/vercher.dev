@@ -7,8 +7,33 @@
   </url>
 
   <url>
-    <loc>https://vercher.dev/personal/</loc>
+    <loc>https://vercher.dev/about/</loc>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://vercher.dev/writing/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://vercher.dev/cv/</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://vercher.dev/contact/</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://vercher.dev/writing/posts/machine-ethics-2011/</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://vercher.dev/writing/posts/why-i-care-about-systems-and-responsibility/</loc>
+    <priority>0.6</priority>
   </url>
 
   <url>

@@ -1,4 +1,7 @@
-# vercher.dev — Brand Usage Guide (v1.3)
+# vercher.dev — Brand Usage Guide (v1.4)
+
+**Changelog**
+- v1.4: Clarified identity vs accent color semantics, strengthened Personal mode guardrails, and documented visual dominance rules.
 
 ## 1. Core Principle (Non-Negotiable)
 
@@ -18,13 +21,13 @@ Light and dark mode switch background and text surfaces only — never brand col
 
 ## 2. Brand Modes & When to Use Them
 
-Each brand mode defines exactly one primary color and one accent color.  
-Accents support hierarchy and interaction but must never compete with the primary.
+Each brand mode defines exactly one identity color and one secondary identity / accent color.  
+Accents support hierarchy and interaction but must never compete with the identity.
 
 ### A. Civic / Political Mode
 
-**Primary Color:** Royal Blue  
-**Supporting Colors:** Firebrick Red (accent)  
+**Identity Color:** Royal Blue  
+**Secondary Identity / Accent Color:** Firebrick Red  
 **Purpose:** Trust, legitimacy, civic clarity
 
 **Use this mode when:**
@@ -34,6 +37,7 @@ Accents support hierarchy and interaction but must never compete with the primar
 - Pages intended for broad, non-technical audiences
 
 **Rules**
+- Neither identity nor accent colors should be used as full backgrounds or allowed to visually dominate; they function as signals, not surfaces.
 - Royal Blue is an **accent**, not a full background
 - Primary backgrounds: charcoal (dark mode), light gray (light mode)
 - Icon color: Royal Blue
@@ -54,7 +58,8 @@ Accents support hierarchy and interaction but must never compete with the primar
 
 ### B. Consulting Mode
 
-**Primary Color:** Cadmium Yellow  
+**Identity Color:** Cadmium Yellow  
+**Secondary Identity / Accent Color:** Ultramarine Blue  
 **Purpose:** Signal competence, systems thinking, and confidence
 
 **Use this mode when:**
@@ -64,7 +69,9 @@ Accents support hierarchy and interaction but must never compete with the primar
 - Anything revenue-adjacent
 
 **Rules**
-- Yellow is an **accent**, not a full background
+- Ultramarine Blue may carry more visual weight in layouts, but Cadmium Yellow defines identity and emphasis.
+- Neither identity nor accent colors should be used as full backgrounds or allowed to visually dominate.
+- Cadmium Yellow and Ultramarine Blue are **accent**, not a full background
 - Primary backgrounds: charcoal (dark mode), light gray (light mode)
 - Icon color: Cadmium Yellow 
 - Icon may stand alone without your name in digital contexts
@@ -82,8 +89,8 @@ Accents support hierarchy and interaction but must never compete with the primar
 
 ### C. Personal Mode
 
-**Primary Color:** Violet  
-**Accent Color:** Cobalt Blue
+**Identity Color:** Violet  
+**Secondary Identity / Accent Color:** Ultramarine Blue  
 **Purpose:** Curiosity, reflection, individuality
 
 **Use this mode when:**
@@ -93,11 +100,12 @@ Accents support hierarchy and interaction but must never compete with the primar
 
 **Rules**
 - Violet may be primary or accent
-- Cobalt Blue is an **accent**, not a full background
-- Layouts may be more expressive
-- Icon may be paired with lighter or more human typography
+- Ultramarine Blue is an **accent**, not a full background
+- Layouts may be more expressive, but typography should remain consistent with the rest of the site unless a specific deviation is intentional and justified.
+- Icon may be paired with slightly lighter or more human typography, but novelty fonts and decorative scripts remain prohibited.
 - Minor asymmetry is acceptable
 - The header lockup follows the same CSS-driven structure as other modes
+- Expressive does not mean experimental: gradients, political color palettes, and dominant brand-color backgrounds are still prohibited.
 
 **Avoid**
 - Corporate polish
@@ -128,7 +136,7 @@ Accents support hierarchy and interaction but must never compete with the primar
 
 ### Personal Mode
 - Violet: `#6A0DAD`
-- Cobalt Blue (accent): `#0019a8`
+- Ultramarine Blue (accent): `#0009FF`
 - Light Gray (light background): `#e9ebf2`
 - Light Gray (light text): `#e9ebf2`
 - Charcoal (dark background): `#1e1e1e`
@@ -306,3 +314,5 @@ Changes require:
 - No ad-hoc tweaks
 
 Future clarity beats present convenience.
+
+When versions are bumped, a short changelog (1–2 bullets) should be added at the top of this document to summarize intent.
