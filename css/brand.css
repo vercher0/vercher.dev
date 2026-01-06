@@ -21,7 +21,7 @@
 
 /* ---------- Civic Mode ---------- */
 :root {
-  --civic-primary: #2222b2; /* Royal Blue */
+  --civic-primary: #0009ff;  /* Ultramarine Blue */
   --civic-accent: #b22222;  /* Firebrick Red */
 
   /* Civic surfaces */
@@ -50,7 +50,7 @@
 /* ---------- Personal Mode ---------- */
 :root {
   --personal-primary: #6a0dad; /* Violet */
-  --personal-accent: #0019a8;  /* Cobalt Blue */
+  --personal-accent: #0009ff;  /* Ultramarine Blue */
 
   /* Personal surfaces */
   --personal-bg-light: var(--light-gray);
@@ -162,7 +162,7 @@ body[data-brand-mode="personal"] .vercher-lockup .lockup-mark {
 
 /* Personal Links (Reflective Accent) */
 body[data-brand-mode="personal"] a {
-  color: var(--brand-primary);
+  color: var(--brand-accent);
   text-decoration: underline;
   text-underline-offset: 0.15em;
   font-weight: 500;

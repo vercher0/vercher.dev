@@ -49,6 +49,11 @@ section {
   border-top: 1px solid var(--light-gray);
 }
 
+body[data-brand-mode="consulting"] section {
+  margin-top: 1.5rem;
+  padding-top: 0.75rem;
+}
+
 /* ---------- Headings ---------- */
 h1,
 h2,
@@ -77,6 +82,20 @@ p {
 /* ---------- Post Metadata ---------- */
 .post-meta {
   text-align: left;
+}
+
+/* ---------- CV Metadata ---------- */
+body[data-brand-mode="consulting"] .cv-updated {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--light-gray);
+}
+
+body[data-brand-mode="consulting"] .cv-updated p {
+  font-size: 0.875rem;
+  color: var(--brand-text);
+  opacity: 0.8;
+  margin: 0;
 }
 
 /* ---------- Links ---------- */
