@@ -40,7 +40,16 @@ main {
   font-size: 0.875rem;
   line-height: 1.4;
   padding-bottom: 1.5rem;
-  word-spacing: 0.75rem;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-separator {
+  margin: 0 0.5rem;
+  opacity: 0.5;
 }
 
 /* ---------- Section Separation ---------- */
